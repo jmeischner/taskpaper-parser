@@ -23,6 +23,9 @@ var important = new Tag("priority", 1);
 // add tag to task
 task1.addTag(important);
 
+// add tag to project
+projectMain.addTag(important);
+
 // comment on one of the task
 var commentFor2 = new Comment("don't forget this!");
 

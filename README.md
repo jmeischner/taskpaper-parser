@@ -35,7 +35,7 @@ fs.readFile(taskPaperFile, { encoding: "utf8" }, function(error, data) {
 This will create taskpaper project, and serialize it into a string.
 
 ```js
-var TaskPaperParser = require("taskpaper-parser");
+var TaskPaperParser = require("../lib/parser");
 
 var Root = TaskPaperParser.Root;
 var Project = TaskPaperParser.Project;
@@ -59,6 +59,9 @@ var important = new Tag("priority", 1);
 
 // add tag to task
 task1.addTag(important);
+
+// add tag to project
+projectMain.addTag(important);
 
 // comment on one of the task
 var commentFor2 = new Comment("don't forget this!");
@@ -91,9 +94,10 @@ console.log(root.serialize());
 
 ###Project
 
-`Project(name)` represents TaskPaper project; methods:
+`Project(name, tags)` represents TaskPaper project; methods:
 
 - `addChild(child)` - used for build tree structure, project can hold subprojects, tasks, and comments
+- `addTag(tag)` - adds tag to project
 - `serialize()` - serializes project tree into proper string
 
 ###Task

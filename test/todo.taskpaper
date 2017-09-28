@@ -1,4 +1,5 @@
-Some project:
+Some project: @priority(1)
+    comment for some project
 	- thing 1
 	- thing 2 @priority(2)
 		comment for thing 2
