@@ -35,7 +35,7 @@ fs.readFile(taskPaperFile, { encoding: "utf8" }, function(error, data) {
 This will create taskpaper project, and serialize it into a string.
 
 ```js
-var TaskPaperParser = require("../lib/parser");
+var TaskPaperParser = require("taskpaper-parser");
 
 var Root = TaskPaperParser.Root;
 var Project = TaskPaperParser.Project;
